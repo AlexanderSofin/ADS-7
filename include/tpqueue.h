@@ -28,12 +28,12 @@ class TPQueue {
       ITEM* val = head->next;
     if (val)
       val->prev = nullptr;
-      T value = head->value;
-      delete head;
-      head = val;
-      return value;
-      } else {
-        throw std::string("Empty!");
+    T value = head->value;
+    delete head;
+    head = val;
+    return value;
+    } else {
+      throw std::string("Empty!");
     }
   }
   void push(const T& value) {
